@@ -1,13 +1,18 @@
 // utils
-@import 'utils/_variable';
+@import "utils/_variable";
 
 // base
-@import 'base/_reset';
-@import 'base/_font';
-@import 'base/_base';
+@import "base/_base";
+@import "base/_font";
 
+// layouts
+@import "layouts/header";
 
-// bootstrap
-// @import 'vendor/bootstrap/bootstrap';
+// components
+@import "components/_buttons";
+@import "components/_cards";
 
-
+// pages
+@import "sections/_banner";
+@import "sections/our-style";
+@import "sections/about";

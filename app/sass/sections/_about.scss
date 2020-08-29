@@ -1,0 +1,28 @@
+.section--about-us {
+  padding-top: 60px;
+
+  .cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    .card-item {
+      width: 50%;
+      padding: 10px;
+      box-shadow: none;
+      align-items: center;
+
+      .card-item__count {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 1.2;
+      }
+
+      .card-item__text {
+        line-height: 1.5;
+        max-width: 125px;
+        padding-top: 10px;
+      }
+    }
+  }
+}

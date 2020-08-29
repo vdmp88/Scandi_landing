@@ -1,20 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
- 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
- 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="img/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="img/favicon/apple-touch-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="img/favicon/apple-touch-icon-114x114.png"
+    />
     <title>template</title>
-	<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__wrapper">
+        <div class="logo">
+          <svg
+            width="85"
+            height="36"
+            viewBox="0 0 85 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M78.9539 17.1428H84.8671L64.5931 0L43.6494 17.1428H49.758L64.5931 4.99998L78.9539 17.1428Z"
+              fill="#2F2F2F"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M54.8107 0.816406H47.942V9.94497L54.8107 4.36308V0.816406Z"
+              fill="#2F2F2F"
+            />
+            <path
+              d="M7.41788 30.2859L4.16621 19.6902H4.08307C4.20008 21.8457 4.25858 23.2837 4.25858 24.0042V30.2859H1.69974V16.7804H5.59805L8.7943 27.1081H8.84972L12.24 16.7804H16.1383V30.2859H13.4686V23.8934C13.4686 23.5916 13.4717 23.2437 13.4778 22.8495C13.4901 22.4554 13.5332 21.4085 13.6071 19.7087H13.524L10.0414 30.2859H7.41788ZM17.8472 19.9581H20.9326L22.8818 25.7687C23.0481 26.2736 23.162 26.871 23.2236 27.5608H23.279C23.3468 26.9264 23.4792 26.3291 23.6762 25.7687L25.5884 19.9581H28.6092L24.2397 31.6069C23.8394 32.6846 23.2667 33.4914 22.5215 34.0272C21.7825 34.5629 20.9172 34.8308 19.9257 34.8308C19.4392 34.8308 18.9619 34.7785 18.4939 34.6738V32.4383C18.8326 32.5183 19.2021 32.5584 19.6024 32.5584C20.1013 32.5584 20.5354 32.4044 20.9049 32.0965C21.2806 31.7947 21.5731 31.3359 21.7825 30.7201L21.9488 30.212L17.8472 19.9581ZM41.3849 30.2859H38.5305V24.4569H33.1818V30.2859H30.3182V16.7804H33.1818V22.0736H38.5305V16.7804H41.3849V30.2859ZM46.8259 25.1035C46.8259 26.1258 46.9922 26.8987 47.3248 27.4222C47.6635 27.9457 48.2116 28.2074 48.9691 28.2074C49.7204 28.2074 50.2593 27.9487 50.5857 27.4314C50.9182 26.908 51.0845 26.132 51.0845 25.1035C51.0845 24.0812 50.9182 23.3145 50.5857 22.8033C50.2531 22.2922 49.7081 22.0366 48.9506 22.0366C48.1993 22.0366 47.6573 22.2922 47.3248 22.8033C46.9922 23.3083 46.8259 24.0751 46.8259 25.1035ZM53.9667 25.1035C53.9667 26.7848 53.5233 28.0996 52.6365 29.048C51.7496 29.9964 50.5149 30.4706 48.9321 30.4706C47.9406 30.4706 47.0661 30.2551 46.3086 29.824C45.5511 29.3868 44.9692 28.7617 44.5627 27.9487C44.1562 27.1358 43.953 26.1874 43.953 25.1035C43.953 23.4161 44.3933 22.1044 45.274 21.1683C46.1547 20.2322 47.3925 19.7641 48.9876 19.7641C49.9791 19.7641 50.8536 19.9797 51.6111 20.4108C52.3686 20.8419 52.9505 21.4608 53.357 22.2676C53.7635 23.0743 53.9667 24.0196 53.9667 25.1035ZM65.5415 30.2859H62.724V24.2537C62.724 23.5085 62.5978 22.9511 62.3453 22.5816C62.0989 22.206 61.7079 22.0181 61.1721 22.0181C60.4516 22.0181 59.9281 22.283 59.6017 22.8126C59.2753 23.3422 59.1121 24.2136 59.1121 25.4269V30.2859H56.2946V19.9581H58.447L58.8257 21.2791H58.9828C59.2599 20.8049 59.6602 20.4354 60.1837 20.1706C60.7071 19.8996 61.3076 19.7641 61.985 19.7641C63.5308 19.7641 64.5777 20.2691 65.1258 21.2791H65.3752C65.6524 20.7988 66.0588 20.4262 66.5946 20.1614C67.1366 19.8965 67.7463 19.7641 68.4237 19.7641C69.5938 19.7641 70.4775 20.0659 71.0749 20.6694C71.6784 21.2668 71.9802 22.2275 71.9802 23.5516V30.2859H69.1535V24.2537C69.1535 23.5085 69.0272 22.9511 68.7747 22.5816C68.5284 22.206 68.1373 22.0181 67.6015 22.0181C66.9118 22.0181 66.3945 22.2645 66.0496 22.7572C65.7109 23.2498 65.5415 24.032 65.5415 25.1035V30.2859ZM79.1579 21.7687C78.5605 21.7687 78.0925 21.9596 77.7538 22.3415C77.4151 22.7171 77.2211 23.2529 77.1718 23.9488H81.1255C81.1132 23.2529 80.9315 22.7171 80.5805 22.3415C80.2295 21.9596 79.7553 21.7687 79.1579 21.7687ZM79.5551 30.4706C77.8923 30.4706 76.5929 30.0118 75.6568 29.0942C74.7207 28.1766 74.2527 26.8772 74.2527 25.1959C74.2527 23.4654 74.6838 22.129 75.546 21.1867C76.4143 20.2383 77.6121 19.7641 79.1394 19.7641C80.599 19.7641 81.7352 20.1798 82.5481 21.0112C83.3611 21.8426 83.7675 22.9912 83.7675 24.4569V25.8241H77.1071C77.1379 26.6247 77.375 27.2498 77.8184 27.6993C78.2619 28.1489 78.8839 28.3737 79.6845 28.3737C80.3065 28.3737 80.8946 28.309 81.4489 28.1797C82.0031 28.0504 82.582 27.8441 83.1855 27.5608V29.7409C82.6929 29.9872 82.1663 30.1689 81.6059 30.2859C81.0455 30.4091 80.3619 30.4706 79.5551 30.4706Z"
+              fill="#2F2F2F"
+            />
+          </svg>
+        </div>
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="#">О нас</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#">Цена</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#">Проекты</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#">Отзывы</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+    </header>
 
+    <section class="section section--banner">
+      <div class="container section__wrapper">
+        <div class="section__description">
+          <h1 class="section__title">Ремонт квартир</h1>
+          <div class="section__text">
+            Создаем скандинавский интерьер в Харькове и области
+          </div>
+          <div class="section_action">
+            <button class="btn btn--primary">Связаться</button>
+          </div>
+        </div>
+        <div class="section__image">
+          <img src="img/main-bg.jpg" alt="banner" />
+        </div>
+      </div>
+      <div class="slogan">
+        SCANDINAVIAN <br />
+        INTERIOR
+      </div>
+    </section>
+
+    <section class="section section--scandinavian-style">
+      <div class="container section__wrapper">
+        <h2 class="section__title">Скандинавский стиль — это</h2>
+        <ul class="cards-wrapper">
+          <li class="card-item">
+            <img src="img/lamp.svg" alt="lamp" />
+            <span class="card-item__text"
+              >Комфорт и обилие света  в пространстве</span
+            >
+          </li>
+          <li class="card-item">
+            <img src="img/brush.svg" alt="brush" />
+            <span class="card-item__text"
+              >Натуральные материалы  и пастельные тона</span
+            >
+          </li>
+          <li class="card-item">
+            <img src="img/ruler.svg" alt="ruler" />
+            <span class="card-item__text"
+              >Простота линий и лаконичность дизайна</span
+            >
+          </li>
+          <li class="card-item">
+            <img src="img/desk.svg" alt="desk" />
+            <span class="card-item__text"
+              >Максимальный функционал и практичность</span
+            >
+          </li>
+          <li class="card-item">
+            <img src="img/plant.svg" alt="plant" />
+            <span class="card-item__text"
+              >Естественность интерьера и самобытность декора</span
+            >
+          </li>
+          <li class="card-item">
+            <img src="img/bed.svg" alt="bed" />
+            <span class="card-item__text"
+              >Экономичность в исполнении и современность в результате</span
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--about-us">
+      <div class="container section__wrapper">
+        <h2 class="section__title">Коротко о нас</h2>
+      </div>
+      <ul class="cards-wrapper">
+        <li class="card-item">
+          <div class="card-item__count">198</div>
+          <div class="card-item__text">сданных объектов</div>
+        </li>
+        <li class="card-item">
+          <div class="card-item__count">209</div>
+          <div class="card-item__text">счастливых жильцов</div>
+        </li>
+        <li class="card-item">
+          <div class="card-item__count">46</div>
+          <div class="card-item__text">обновленных квартир</div>
+        </li>
+        <li class="card-item">
+          <div class="card-item__count">27</div>
+          <div class="card-item__text">безупречных мастеров</div>
+        </li>
+        <li class="card-item">
+          <div class="card-item__count">6</div>
+          <div class="card-item__text">лет работы на рынке</div>
+        </li>
+        <li class="card-item">
+          <div class="card-item__count">5</div>
+          <div class="card-item__text">проверенных партнеров</div>
+        </li>
+      </ul>
+    </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="js/libs.min.js"></script>
-	<script src="js/main.js"></script>
-</body>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
