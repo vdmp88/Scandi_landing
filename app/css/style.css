@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@700&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+  a:hover, a:focus, a:active, a:visited {
+    text-decoration: none;
+    color: inherit; }
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  max-width: -webkit-calc(1280px - 200px);
+  max-width: calc(1280px - 200px);
+  width: 100%;
+  margin: 0 auto; }
+
+body {
+  font-family: "Museo Sans Cyrl";
+  color: #303030; }
+
+.section .section__title {
+  position: relative;
+  font-size: 22px;
+  line-height: 1.3;
+  color: #303030;
+  text-align: center;
+  padding-bottom: 30px; }
+  .section .section__title::before {
+    content: "";
+    position: absolute;
+    background: #dbbfb0;
+    -webkit-border-radius: 1px;
+            border-radius: 1px;
+    width: 50px;
+    height: 5px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: -10px; }
+
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  src: url("../../fonts/MuseoSansCyrl-500.eot");
+  src: local("../../fonts/MuseoSansCyrl-500"), url("../../fonts/MuseoSansCyrl-500.eot?#iefix") format("embedded-opentype"), url("../../fonts/MuseoSansCyrl-500.woff") format("woff"), url("../../fonts/MuseoSansCyrl-500.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  src: url("../../MuseoSansCyrl-700.eot");
+  src: local("../../MuseoSansCyrl-700"), url("../../MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"), url("../../MuseoSansCyrl-700.woff") format("woff"), url("../../MuseoSansCyrl-700.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  src: url("../../MuseoSansCyrl-300.eot");
+  src: local("../../MuseoSansCyrl-300"), url("../../MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"), url("../../MuseoSansCyrl-300.woff") format("woff"), url("../../MuseoSansCyrl-300.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+.header {
+  padding: 0 20px;
+  height: 70px;
+  -webkit-box-shadow: 0px 2px 6px rgba(112, 112, 112, 0.06);
+          box-shadow: 0px 2px 6px rgba(112, 112, 112, 0.06); }
+  .header .header__wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%; }
+    .header .header__wrapper .navigation {
+      display: none; }
+    .header .header__wrapper .hamburger {
+      cursor: pointer;
+      padding: 10px;
+      position: relative;
+      left: 10px; }
+      .header .header__wrapper .hamburger .line {
+        display: block;
+        width: 24px;
+        height: 3px;
+        -webkit-border-radius: 5px;
+                border-radius: 5px;
+        background: #303030; }
+        .header .header__wrapper .hamburger .line + .line {
+          margin-top: 4px; }
+
+.btn {
+  font-size: 14px;
+  font-weight: 500;
+  color: #303030;
+  padding: 9px 44px;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer; }
+  .btn.btn--primary {
+    background: #dbbfb0; }
+
+.card-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background: #ffffff;
+  padding: 33px 30px;
+  -webkit-box-shadow: 0px 0px 9.9238px rgba(198, 198, 198, 0.35);
+          box-shadow: 0px 0px 9.9238px rgba(198, 198, 198, 0.35); }
+  .card-item .card-item__text {
+    display: block;
+    max-width: 262px;
+    font-size: 18px;
+    width: 100%;
+    padding-top: 15px; }
+
+.section.section--banner {
+  height: -webkit-calc(100vh - 70px);
+  height: calc(100vh - 70px); }
+  .section.section--banner .section__wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    height: 100%;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden; }
+    .section.section--banner .section__wrapper::before {
+      content: url("../img/banner-item.svg");
+      position: absolute;
+      right: 0;
+      top: -200px;
+      z-index: -1; }
+    .section.section--banner .section__wrapper::after {
+      content: url("../img/banner-item-2.svg");
+      position: absolute;
+      right: 0;
+      bottom: 45px;
+      z-index: -1; }
+    .section.section--banner .section__wrapper .section__description {
+      position: relative;
+      left: 20px;
+      z-index: 2;
+      max-width: 300px; }
+      .section.section--banner .section__wrapper .section__description .section__title {
+        font-size: 36px;
+        font-weight: 700; }
+      .section.section--banner .section__wrapper .section__description .section__text {
+        padding: 10px 0 20px; }
+    .section.section--banner .section__wrapper .section__image {
+      height: 80%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      position: absolute;
+      left: 60%;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .section.section--banner .section__wrapper .section__image img {
+        height: 100%; }
+  .section.section--banner .slogan {
+    position: relative;
+    text-align: right;
+    padding-right: 20px;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 1px;
+    line-height: 36px;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #ebebeb; }
+    .section.section--banner .slogan::before {
+      content: "";
+      position: absolute;
+      max-width: 160px;
+      height: 1px;
+      width: 100%;
+      left: 20px;
+      top: 50px;
+      background: #dbbfb0; }
+      @media (max-width: 360px) {
+        .section.section--banner .slogan::before {
+          max-width: 110px; } }
+
+.section--scandinavian-style {
+  padding: 100px 33px 0px; }
+  .section--scandinavian-style .section__title {
+    margin-top: 60px; }
+  .section--scandinavian-style .cards-wrapper li + li {
+    margin-top: 20px; }
+
+.section--about-us {
+  padding-top: 60px; }
+  .section--about-us .cards-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    .section--about-us .cards-wrapper .card-item {
+      width: 50%;
+      padding: 10px;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .section--about-us .cards-wrapper .card-item .card-item__count {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 1.2; }
+      .section--about-us .cards-wrapper .card-item .card-item__text {
+        line-height: 1.5;
+        max-width: 125px;
+        padding-top: 10px; }

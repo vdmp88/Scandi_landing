@@ -1,0 +1,13 @@
+.section--scandinavian-style {
+  padding: 100px 33px 0px;
+
+  .section__title {
+    margin-top: 60px;
+  }
+
+  .cards-wrapper {
+    li + li {
+      margin-top: 20px;
+    }
+  }
+}

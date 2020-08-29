@@ -41,7 +41,7 @@ gulp.task(
 
 gulp.task("js", function () {
   return gulp
-    .src([""])
+    .src(["app/js/libs/slick.js"])
     .pipe(concat("libs.min.js"))
     .pipe(uglifyjs())
     .pipe(gulp.dest("app/js"));
