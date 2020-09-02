@@ -1,4 +1,4 @@
-.card-item {
+.card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -6,11 +6,108 @@
   padding: 33px 30px;
   box-shadow: 0px 0px 9.9238px rgba(198, 198, 198, 0.35);
 
-  .card-item__text {
+  .card__text {
     display: block;
     max-width: 262px;
     font-size: 18px;
     width: 100%;
     padding-top: 15px;
+  }
+
+  &.card--about-us {
+    width: 50%;
+    padding: 10px;
+    box-shadow: none;
+    align-items: center;
+
+    .card__count {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 64px;
+      line-height: 1.2;
+    }
+
+    .card__text {
+      line-height: 1.5;
+      max-width: 125px;
+      padding-top: 10px;
+    }
+  }
+
+  &.card--price {
+    background: $white-color;
+    box-shadow: 0px 0px 10px rgba(240, 222, 212, 0.5),
+      0px 0px 9.57143px rgba(198, 198, 198, 0.35);
+    border-radius: 5px;
+    min-height: 150px;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    font-size: 17px;
+    padding: 10px;
+
+    & + .card {
+      margin-top: 20px;
+    }
+
+    .card__price {
+      color: $primary-color;
+    }
+  }
+
+  &.card--comment {
+    box-shadow: 0px 0px 10px rgba(198, 198, 198, 0.3);
+    border-radius: 5px 5px 0px 0px;
+    max-width: 320px;
+    width: 100%;
+    padding: 30px 40px 34px 30px;
+    position: relative;
+    height: 100%;
+
+    @media (max-width: 375px) {
+      padding: 15px 15px 20px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background: $primary-color;
+      left: 0;
+      bottom: 0;
+    }
+
+    .card__header {
+      display: flex;
+
+      .card__client-info {
+        padding-left: 20px;
+
+        .card__client-name {
+          font-size: 18px;
+          padding-top: 10px;
+          font-weight: 700;
+        }
+
+        .card__client-rate {
+          font-size: 16px;
+          padding-top: 5px;
+        }
+
+        .card__client-social-network {
+          color: #bbb;
+          font-size: 16px;
+          padding-top: 5px;
+        }
+      }
+    }
+
+    .card__body {
+      color: #7d7d7d;
+      font-size: 16px;
+      padding-top: 15px;
+      line-height: 1.4;
+    }
   }
 }
