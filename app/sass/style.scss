@@ -11,8 +11,17 @@
 // components
 @import "components/_buttons";
 @import "components/_cards";
+@import "components/slider";
 
 // pages
 @import "sections/_banner";
 @import "sections/our-style";
 @import "sections/about";
+@import "sections/price";
+@import "sections/our-project";
+@import "sections/work-process";
+@import "sections/review";
+@import "sections/partners";
+
+// vendor
+@import "vendor/slick/slick.scss";

@@ -1,0 +1,37 @@
+.section--work-process {
+  padding-top: 60px;
+
+  .list {
+    padding: 0 30px;
+
+    .list__item {
+      display: flex;
+      align-items: center;
+
+      & + li {
+        padding-top: 20px;
+      }
+
+      .list__count {
+        position: relative;
+        font-size: 32px;
+        letter-spacing: 0.5px;
+
+        &::before {
+          content: "";
+          background: #ddcbc1;
+          width: 10px;
+          position: absolute;
+          left: 0;
+          height: 100%;
+          z-index: -1;
+        }
+      }
+
+      .list__text {
+        padding-left: 15px;
+        font-size: 18px;
+      }
+    }
+  }
+}
