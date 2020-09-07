@@ -70,11 +70,11 @@
             </li>
           </ul>
         </nav>
-        <div class="hamburger">
+        <button class="hamburger">
           <span class="line"></span>
           <span class="line"></span>
           <span class="line"></span>
-        </div>
+        </button>
       </div>
     </header>
 
@@ -102,38 +102,38 @@
     <section class="section section--our-style">
       <div class="container section__wrapper">
         <h2 class="section__title">Скандинавский стиль — это</h2>
-        <ul class="cards-wrapper">
+        <ul class="cards-wrapper cards-wrapper--our-style">
           <li class="card card--our-style">
             <img src="img/lamp.svg" alt="lamp" />
             <span class="card__text">
               Комфорт и обилие света  в пространстве
             </span>
           </li>
-          <li class="card">
+          <li class="card card--our-style">
             <img src="img/brush.svg" alt="brush" />
             <span class="card__text">
               Натуральные материалы  и пастельные тона
             </span>
           </li>
-          <li class="card">
+          <li class="card card--our-style">
             <img src="img/ruler.svg" alt="ruler" />
             <span class="card__text">
               Простота линий и лаконичность дизайна
             </span>
           </li>
-          <li class="card">
+          <li class="card card--our-style">
             <img src="img/desk.svg" alt="desk" />
             <span class="card__text">
               Максимальный функционал и практичность
             </span>
           </li>
-          <li class="card">
+          <li class="card card--our-style">
             <img src="img/plant.svg" alt="plant" />
             <span class="card__text">
               Естественность интерьера и самобытность декора
             </span>
           </li>
-          <li class="card">
+          <li class="card card--our-style">
             <img src="img/bed.svg" alt="bed" />
             <span class="card__text">
               Экономичность в исполнении и современность в результате
@@ -178,18 +178,51 @@
     <section class="section section--price">
       <div class="container section__wrapper">
         <h2 class="section__title">Тарифы на ремонт</h2>
-        <ul class="cards-wrapper">
-          <li class="card card--price">
-            <h4 class="card__title">Стандарт</h4>
-            <div class="card__price">от 799 грн/ м.кв.</div>
+        <ul class="cards-wrapper cards-wrapper--accordion">
+          <li class="card card--price card--accardion">
+            <div class="card__header">
+              <h4 class="card__title">Стандарт</h4>
+              <div class="card__price">от 799 грн/ м.кв.</div>
+            </div>
+            <ul class="card__content">
+              <li>демонтаж настенного покрытия</li>
+              <li>электромонтажные работы</li>
+              <li>реставрация напольного покрытия</li>
+              <li>штукатурка и покраска</li>
+              <li>установка натяжного потолка</li>
+              <li>полная замена мебели</li>
+              <li>установка сигнализаций</li>
+              <li>покупка всего декора</li>
+            </ul>
           </li>
-          <li class="card card--price">
-            <h4 class="card__title">Люкс</h4>
-            <div class="card__price">от 799 грн/ м.кв.</div>
+          <li class="card card--price card--accardion">
+            <div class="card__header">
+              <h4 class="card__title">Люкс</h4>
+              <div class="card__price">от 799 грн/ м.кв.</div>
+            </div>
+            <ul class="card__content">
+              <li>демонтаж настенного покрытия</li>
+              <li>электромонтажные работы</li>
+              <li>реставрация напольного покрытия</li>
+              <li>штукатурка и покраска</li>
+              <li>установка натяжного потолка</li>
+              <li>полная замена мебели</li>
+              <li>установка сигнализаций</li>
+              <li>покупка всего декора</li>
+            </ul>
           </li>
-          <li class="card card--price">
-            <h4 class="card__title">Эконом</h4>
-            <div class="card__price">от 599 грн/ м.кв.</div>
+          <li class="card card--price card--accardion">
+            <div class="card__header">
+              <h4 class="card__title">Эконом</h4>
+              <div class="card__price">от 599 грн/ м.кв.</div>
+            </div>
+            <ul class="card__content">
+              <li>демонтаж настенного покрытия</li>
+              <li>реставрация напольного покрытия</li>
+              <li>грунтовка стен и поклейка обоев</li>
+              <li>частичная замена мебели</li>
+              <li>покупка базового декора</li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -198,10 +231,21 @@
     <section class="section section--last-projects">
       <div class="container section__wrapper">
         <h2 class="section__title">Последние проекты</h2>
-        <ul class="cards-wrapper">
-          <li class="card">1</li>
-          <li class="card">2</li>
-          <li class="card">3</li>
+        <ul class="cards-wrapper cards-wrapper--gallery">
+          <li class="card card--latest-project">
+            <div class="card__wrapper">
+              <img src="img/latest-project-1.jpg" alt="latest-project" />
+              <img src="img/latest-project-2.jpg" alt="latest-project" />
+            </div>
+            <div class="card__wrapper card__wrapper--row-reverse">
+              <img src="img/latest-project-4.jpg" alt="latest-project" />
+              <img src="img/latest-project-3.jpg" alt="latest-project" />
+            </div>
+          </li>
+          <li class="card card--latest-project card--full-height">
+            <img src="img/latest-project-5.jpg" alt="latest-project" />
+            <img />
+          </li>
         </ul>
       </div>
     </section>
@@ -410,6 +454,81 @@
         </div>
       </div>
     </section>
+
+    <section class="section section--feedback">
+      <div class="container">
+        <div class="title-wrapper">
+          <h2 class="section__title">
+            Позвольте себе комфорт и уют, который так заслуживаете
+          </h2>
+          <button class="btn btn--primary">Связаться</button>
+        </div>
+        <ul class="list list--contact">
+          <li class="list__item">+(380)99-888-9890</li>
+          <li class="list__item">scandiremont@gmail.com</li>
+          <li class="list__item">Харьков, Украина</li>
+        </ul>
+        <div class="slogan">
+          SCANDINAVIAN <br />
+          INTERIOR
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="logo">
+          <img src="img/white-logo.svg" alt="logo" />
+        </div>
+        <nav class="navigation">
+          <ul class="list">
+            <li class="list__item list__item--bolder">
+              <a href="#">НАВИГАЦИЯ</a>
+            </li>
+            <li class="list__item">
+              <a href="#">Цены</a>
+            </li>
+            <li class="list__item">
+              <a href="#">О нас</a>
+            </li>
+            <li class="list__item">
+              <a href="#">Отзывы</a>
+            </li>
+            <li class="list__item">
+              <a href="#">Проекты</a>
+            </li>
+            <li class="list__item list__item--bolder">
+              <a href="#">Гарантии</a>
+            </li>
+            <li class="list__item list__item--bolder">
+              <a href="#">Сотрудничество</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="list list--social-network">
+          <li class="list__item">
+            <a href="#">
+              <img src="img/instagram.svg" alt="social-network" />
+            </a>
+          </li>
+          <li class="list__item">
+            <a href="#">
+              <img src="img/twitter.svg" alt="social-network" />
+            </a>
+          </li>
+          <li class="list__item">
+            <a href="#">
+              <img src="img/facebook.svg" alt="social-network" />
+            </a>
+          </li>
+          <li class="list__item">
+            <a href="#">
+              <img src="img/linked-in.svg" alt="social-network" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>

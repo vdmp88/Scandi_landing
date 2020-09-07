@@ -1,0 +1,31 @@
+.footer {
+  background: #2c2c2c;
+  color: $white-color;
+  padding: 65px 0 50px 20px;
+
+  .navigation {
+    .list {
+      .list__item {
+        padding-top: 12px;
+        font-size: 16px;
+
+        &.list__item--bolder {
+          padding-top: 25px;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  .list--social-network {
+    display: flex;
+    padding-top: 35px;
+
+    .list__item {
+      & + .list__item {
+        padding-left: 30px;
+      }
+    }
+  }
+}
