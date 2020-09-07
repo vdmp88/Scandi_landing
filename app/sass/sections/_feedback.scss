@@ -1,0 +1,78 @@
+.section--feedback {
+  overflow: hidden;
+
+  .section__title {
+    text-align: start;
+    padding-bottom: 20px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .title-wrapper {
+    position: relative;
+    padding: 140px 0 70px 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 222px;
+      left: -20%;
+      top: 60%;
+      background: rgba(247, 247, 247, 0.62);
+      transform: rotate(16.77deg) translateY(-50%);
+    }
+
+    .btn {
+      position: relative;
+    }
+  }
+
+  .list--contact {
+    position: relative;
+    padding: 80px 0 80px 75px;
+    background: $primary-color;
+    z-index: -1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: #bda79a;
+      height: 150px;
+      width: 4px;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .list__item {
+      font-size: 20px;
+      position: relative;
+
+      &::before {
+        content: url("../img/envelope.svg");
+        position: absolute;
+        left: -35px;
+        top: 0;
+      }
+
+      &:first-child::before {
+        content: url("../img/phone-call.svg");
+      }
+
+      &:last-child::before {
+        content: url("../img/location.svg");
+      }
+
+      & + .list__item {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .slogan {
+    margin: 15px 0;
+  }
+}

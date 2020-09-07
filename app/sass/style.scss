@@ -7,6 +7,7 @@
 
 // layouts
 @import "layouts/header";
+@import "layouts/footer";
 
 // components
 @import "components/_buttons";
@@ -22,6 +23,7 @@
 @import "sections/work-process";
 @import "sections/review";
 @import "sections/partners";
+@import "sections/feedback";
 
 // vendor
 @import "vendor/slick/slick.scss";

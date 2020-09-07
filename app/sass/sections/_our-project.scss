@@ -1,3 +1,9 @@
 .section--last-projects {
   padding-top: 60px;
+  display: none;
+
+  .cards-wrapper--gallery {
+    display: flex;
+    justify-content: space-between;
+  }
 }

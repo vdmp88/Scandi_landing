@@ -14,11 +14,35 @@
     padding-top: 15px;
   }
 
+  &.card--our-style {
+    width: 100%;
+
+    & + .card--our-style {
+      margin-top: 20px;
+    }
+
+    @media (min-width: 576px) {
+      width: 48%;
+      padding: 30px;
+      margin-top: 20px;
+    }
+
+    @media (min-width: 1200px) {
+      width: 31.3%;
+    }
+  }
+
   &.card--about-us {
     width: 50%;
     padding: 10px;
     box-shadow: none;
     align-items: center;
+
+    @media (min-width: 991px) {
+      width: 33.3%;
+      flex-direction: row;
+      justify-content: center;
+    }
 
     .card__count {
       font-family: "Montserrat", sans-serif;
@@ -31,6 +55,11 @@
       line-height: 1.5;
       max-width: 125px;
       padding-top: 10px;
+
+      @media (min-width: 991px) {
+        padding-top: 0;
+        padding-left: 10px;
+      }
     }
   }
 
@@ -49,9 +78,21 @@
     & + .card {
       margin-top: 20px;
     }
+    .card__header {
+      text-align: center;
+      width: 100%;
+      padding: 25px 0px;
+      cursor: pointer;
 
-    .card__price {
-      color: $primary-color;
+      .card__price {
+        color: $primary-color;
+      }
+    }
+
+    .card__content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 1s ease-in-out;
     }
   }
 
@@ -108,6 +149,30 @@
       font-size: 16px;
       padding-top: 15px;
       line-height: 1.4;
+    }
+  }
+
+  &.card--latest-project {
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    justify-content: space-between;
+
+    .card__wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      img:first-child {
+        margin-right: 30px;
+      }
+
+      &.card__wrapper--row-reverse {
+        flex-direction: row-reverse;
+        img:first-child {
+          margin-right: 0;
+          margin-left: 30px;
+        }
+      }
     }
   }
 }

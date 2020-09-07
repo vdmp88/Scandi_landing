@@ -30,6 +30,10 @@
       height: auto;
       justify-content: center;
       align-items: center;
+
+      img {
+        width: 100%;
+      }
     }
 
     .slider__item {
@@ -55,6 +59,7 @@
     .slider-navigation__prev,
     .slider-navigation__next {
       cursor: pointer;
+      z-index: 20;
     }
 
     .slider-navigation__prev {
