@@ -3,17 +3,30 @@
   color: $white-color;
   padding: 65px 0 50px 20px;
 
+  @media (min-width: 768px) {
+    margin-top: 30px;
+  }
+
   .navigation {
     .list {
+      .accordion {
+        padding-top: 25px;
+
+        &:first-child {
+          .accordion__content {
+            max-height: 100%;
+          }
+        }
+      }
+
+      .list__section {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
       .list__item {
         padding-top: 12px;
         font-size: 16px;
-
-        &.list__item--bolder {
-          padding-top: 25px;
-          font-weight: 700;
-          text-transform: uppercase;
-        }
       }
     }
   }

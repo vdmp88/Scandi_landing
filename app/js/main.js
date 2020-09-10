@@ -1,99 +1,107 @@
 $(document).ready(function () {
   $(".slider.slider--comment").slick({
     arrows: false,
+    dots: true,
     slidesToShow: 3,
     responsive: [
       {
         breakpoint: 991,
         settings: {
           slidesToShow: 2,
+          dots: 0,
         },
       },
 
       {
-        breakpoint: 480,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
+          dots: 0,
         },
       },
     ],
   });
 
   $(".slider.slider--partners").slick({
-    slidesToShow: 2,
+    slidesToShow: 5,
     prevArrow: $(".slider-navigation__prev"),
     nextArrow: $(".slider-navigation__next"),
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  let screenWidth = window.innerWidth;
-  let mobile = screenWidth < 768;
+const init = () => {
+  document.addEventListener("DOMContentLoaded", () => {
+    initMobileDevice();
+  });
+};
 
-  initHamburger();
-  initAccordion();
+const initMobileDevice = () => {
+  window.addEventListener("resize", () => {
+    const screenWidth = window.innerWidth;
+    const mobile = screenWidth > 768;
 
-  // window.addEventListener("resize", initMobileMenu);
-});
+    if (!mobile) {
+      initAccordion();
+      initHamburger();
+    }
+  });
+};
 
 function onClickHamburger() {
-  let navigation = document.querySelector(".navigation");
+  const navigation = document.querySelector(".navigation");
+  const hamburger = document.querySelector(".hamburger");
+
   navigation.classList.toggle("navigation--active");
+  hamburger.classList.toggle("is-active");
 }
 
 let initHamburger = () => {
-  let hamburger = document.querySelector(".hamburger");
+  const hamburger = document.querySelector(".hamburger");
   hamburger.addEventListener("click", onClickHamburger);
 };
 
-function toggleAccordion() {
-  let cardItems = document.querySelectorAll(".card--accardion");
-  let thisItem = this.parentNode;
+function toggleAccordion(e) {
+  const cardHeader = e.currentTarget;
+  const cardBody = cardHeader.nextElementSibling;
+  const card = cardHeader.parentNode;
 
-  cardItems.forEach((item) => {
-    if (thisItem === item) {
-      if (
-        !item.children[1].style.maxHeight ||
-        item.children[1].style.maxHeight == 0 + "px"
-      ) {
-        item.children[1].style.maxHeight = item.children[1].scrollHeight + "px";
-      } else {
-        item.children[1].style.maxHeight = 0 + "px";
-      }
-    }
-  });
+  const isOpen = card.classList.contains("accordion-open");
+
+  if (!isOpen) {
+    card.classList.add("accordion-open");
+    cardBody.style.maxHeight = `${cardBody.scrollHeight}px`;
+  } else {
+    card.classList.remove("accordion-open");
+    cardBody.style.maxHeight = "0px";
+  }
 }
 
 let initAccordion = () => {
-  let cardHeader = document.querySelectorAll(".card__header");
+  const accordionHeader = document.querySelectorAll(".accordion__header");
 
-  cardHeader.forEach((title) =>
+  accordionHeader.forEach((title) =>
     title.addEventListener("click", toggleAccordion)
   );
 };
 
-let images = [
-  {
-    src: "img/latest-project-1.jpg",
-  },
-  {
-    src: "img/latest-project-2.jpg",
-  },
-  {
-    src: "img/latest-project-3.jpg",
-  },
-  {
-    src: "img/latest-project-4.jpg",
-  },
-  {
-    src: "img/latest-project-5.jpg",
-  },
-];
-
-let renderCard = () => {
-  const card = `
-    <div class="card card--latest-project">
-      
-    </div>
-  `;
-};
+init();

@@ -70,11 +70,11 @@
             </li>
           </ul>
         </nav>
-        <button class="hamburger">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </button>
+        <div class="hamburger hamburger--slider">
+          <div class="hamburger__box">
+            <div class="hamburger__inner"></div>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -152,20 +152,20 @@
             <div class="card__text">сданных объектов</div>
           </li>
           <li class="card card--about-us">
-            <div class="card__count">209</div>
-            <div class="card__text">счастливых жильцов</div>
-          </li>
-          <li class="card card--about-us">
             <div class="card__count">46</div>
             <div class="card__text">обновленных квартир</div>
           </li>
           <li class="card card--about-us">
-            <div class="card__count">27</div>
-            <div class="card__text">безупречных мастеров</div>
+            <div class="card__count">209</div>
+            <div class="card__text">счастливых жильцов</div>
           </li>
           <li class="card card--about-us">
             <div class="card__count">6</div>
             <div class="card__text">лет работы на рынке</div>
+          </li>
+          <li class="card card--about-us">
+            <div class="card__count">27</div>
+            <div class="card__text">безупречных мастеров</div>
           </li>
           <li class="card card--about-us">
             <div class="card__count">5</div>
@@ -178,13 +178,13 @@
     <section class="section section--price">
       <div class="container section__wrapper">
         <h2 class="section__title">Тарифы на ремонт</h2>
-        <ul class="cards-wrapper cards-wrapper--accordion">
-          <li class="card card--price card--accardion">
-            <div class="card__header">
+        <ul class="cards-wrapper">
+          <li class="card card--price accordion">
+            <div class="card__header accordion__header">
               <h4 class="card__title">Стандарт</h4>
               <div class="card__price">от 799 грн/ м.кв.</div>
             </div>
-            <ul class="card__content">
+            <ul class="card__content accordion__content">
               <li>демонтаж настенного покрытия</li>
               <li>электромонтажные работы</li>
               <li>реставрация напольного покрытия</li>
@@ -195,12 +195,12 @@
               <li>покупка всего декора</li>
             </ul>
           </li>
-          <li class="card card--price card--accardion">
-            <div class="card__header">
+          <li class="card card--price accordion">
+            <div class="card__header accordion__header">
               <h4 class="card__title">Люкс</h4>
               <div class="card__price">от 799 грн/ м.кв.</div>
             </div>
-            <ul class="card__content">
+            <ul class="card__content accordion__content">
               <li>демонтаж настенного покрытия</li>
               <li>электромонтажные работы</li>
               <li>реставрация напольного покрытия</li>
@@ -211,12 +211,12 @@
               <li>покупка всего декора</li>
             </ul>
           </li>
-          <li class="card card--price card--accardion">
-            <div class="card__header">
+          <li class="card card--price accordion">
+            <div class="card__header accordion__header">
               <h4 class="card__title">Эконом</h4>
               <div class="card__price">от 599 грн/ м.кв.</div>
             </div>
-            <ul class="card__content">
+            <ul class="card__content accordion__content">
               <li>демонтаж настенного покрытия</li>
               <li>реставрация напольного покрытия</li>
               <li>грунтовка стен и поклейка обоев</li>
@@ -425,31 +425,32 @@
     <section class="section section--partners">
       <div class="container section__wrapper">
         <h2 class="section__title">Наши партнеры</h2>
-      </div>
-      <div class="slider-wrapper">
-        <div class="slider slider--partners">
-          <div class="slider__item">
-            <img src="img/partners-1.jpg" alt="partners" />
+
+        <div class="slider-wrapper">
+          <div class="slider slider--partners">
+            <div class="slider__item">
+              <img src="img/partners-1.jpg" alt="partners" />
+            </div>
+            <div class="slider__item">
+              <img src="img/partners-2.jpg" alt="partners" />
+            </div>
+            <div class="slider__item">
+              <img src="img/partners-3.jpg" alt="partners" />
+            </div>
+            <div class="slider__item">
+              <img src="img/partners-4.jpg" alt="partners" />
+            </div>
+            <div class="slider__item">
+              <img src="img/partners-2.jpg" alt="partners" />
+            </div>
           </div>
-          <div class="slider__item">
-            <img src="img/partners-2.jpg" alt="partners" />
-          </div>
-          <div class="slider__item">
-            <img src="img/partners-3.jpg" alt="partners" />
-          </div>
-          <div class="slider__item">
-            <img src="img/partners-4.jpg" alt="partners" />
-          </div>
-          <div class="slider__item">
-            <img src="img/partners-2.jpg" alt="partners" />
-          </div>
-        </div>
-        <div class="slider-navigation">
-          <div class="slider-navigation__prev">
-            <img src="img/arrow.svg" alt="prev-arrow" />
-          </div>
-          <div class="slider-navigation__next">
-            <img src="img/arrow.svg" alt="next-arrow" />
+          <div class="slider-navigation">
+            <div class="slider-navigation__prev">
+              <img src="img/arrow.svg" alt="prev-arrow" />
+            </div>
+            <div class="slider-navigation__next">
+              <img src="img/arrow.svg" alt="next-arrow" />
+            </div>
           </div>
         </div>
       </div>
@@ -462,6 +463,21 @@
             Позвольте себе комфорт и уют, который так заслуживаете
           </h2>
           <button class="btn btn--primary">Связаться</button>
+        </div>
+        <div class="form-wrapper">
+          <h3 class="form__title">Остались вопросы?</h3>
+          <span class="form__text">
+            Заполните форму, и мы свяжемся с Вами в ближайше время
+          </span>
+          <form class="form form--feedback">
+            <input class="input-field" type="text" placeholder="Ваше имя" />
+            <input
+              class="input-field"
+              type="text"
+              placeholder="Номер телефона"
+            />
+            <button class="btn btn--primary">Отправить</button>
+          </form>
         </div>
         <ul class="list list--contact">
           <li class="list__item">+(380)99-888-9890</li>
@@ -482,26 +498,52 @@
         </div>
         <nav class="navigation">
           <ul class="list">
-            <li class="list__item list__item--bolder">
-              <a href="#">НАВИГАЦИЯ</a>
+            <li class="accordion accordion-open">
+              <span class="list__section accordion__header">НАВИГАЦИЯ</span>
+              <ul class="accordion__content">
+                <li class="list__item">
+                  <a href="#">Цены</a>
+                </li>
+                <li class="list__item">
+                  <a href="#">О нас</a>
+                </li>
+                <li class="list__item">
+                  <a href="#">Отзывы</a>
+                </li>
+                <li class="list__item">
+                  <a href="#">Проекты</a>
+                </li>
+              </ul>
             </li>
-            <li class="list__item">
-              <a href="#">Цены</a>
+            <li class="accordion">
+              <span class="list__section accordion__header">Гарантии</span>
+              <ul class="accordion__content">
+                <li class="list__item">
+                  <a href="#">Сертификаты</a>
+                </li>
+                <li class="list__item">
+                  <a href="#">Мастера</a>
+                </li>
+                <li class="list__item">
+                  <a href="#">Лицензии</a>
+                </li>
+              </ul>
             </li>
-            <li class="list__item">
-              <a href="#">О нас</a>
-            </li>
-            <li class="list__item">
-              <a href="#">Отзывы</a>
-            </li>
-            <li class="list__item">
-              <a href="#">Проекты</a>
-            </li>
-            <li class="list__item list__item--bolder">
-              <a href="#">Гарантии</a>
-            </li>
-            <li class="list__item list__item--bolder">
-              <a href="#">Сотрудничество</a>
+            <li class="accordion">
+              <span class="list__section accordion__header">
+                Сотрудничество
+              </span>
+              <ul class="accordion__content">
+                <li class="list__item">
+                  <a href="#">Компаниям</a>
+                </li>
+                <li class="list__item">
+                  <a href="#">Мастерам</a>
+                </li>
+                <li class="list__item">
+                  <a href="#">Рабочим</a>
+                </li>
+              </ul>
             </li>
           </ul>
         </nav>

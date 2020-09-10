@@ -37,6 +37,32 @@
     padding: 10px;
     box-shadow: none;
     align-items: center;
+    padding: 0;
+    margin-top: 20px;
+
+    &:first-child {
+      order: 0;
+    }
+
+    &:nth-child(2) {
+      order: 2;
+    }
+
+    &:nth-child(3) {
+      order: 1;
+    }
+
+    &:nth-child(4) {
+      order: 4;
+    }
+
+    &:nth-child(5) {
+      order: 3;
+    }
+
+    &:last-child {
+      order: 5;
+    }
 
     @media (min-width: 991px) {
       width: 33.3%;
@@ -49,6 +75,12 @@
       font-weight: 500;
       font-size: 64px;
       line-height: 1.2;
+      max-width: 125px;
+      width: 100%;
+      @media (min-width: 991px) {
+        max-width: initial;
+        width: auto;
+      }
     }
 
     .card__text {
@@ -68,21 +100,39 @@
     box-shadow: 0px 0px 10px rgba(240, 222, 212, 0.5),
       0px 0px 9.57143px rgba(198, 198, 198, 0.35);
     border-radius: 5px;
-    min-height: 150px;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
     font-size: 17px;
-    padding: 10px;
+    padding: 0px;
+    max-width: 335px;
+    width: 100%;
+    margin-bottom: 20px;
 
-    & + .card {
-      margin-top: 20px;
+    @media (min-width: 768px) {
+      justify-content: flex-start;
+      margin-bottom: 0;
     }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     .card__header {
+      transition: 0.5s all cubic-bezier(0.34, -0.32, 0, 1.13);
       text-align: center;
       width: 100%;
-      padding: 25px 0px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
       cursor: pointer;
+      padding: 50px 10px;
+
+      .card__title {
+        text-transform: uppercase;
+        padding-bottom: 5px;
+      }
 
       .card__price {
         color: $primary-color;
@@ -90,9 +140,44 @@
     }
 
     .card__content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 1s ease-in-out;
+      li {
+        position: relative;
+        padding-left: 10px;
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          background: $dark-color;
+          border-radius: 50%;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  &.accordion-open {
+    background: rgba(233, 207, 192, 0.69);
+    border-radius: 5px;
+
+    .card__header {
+      padding: 30px 0 20px 0;
+
+      .card__price {
+        color: #756a63;
+      }
+    }
+
+    .card__content {
+      padding-bottom: 35px;
     }
   }
 
