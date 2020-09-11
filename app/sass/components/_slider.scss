@@ -16,9 +16,10 @@
     display: flex;
     height: auto;
     margin: 0 10px;
+    justify-content: center;
 
-    @media (max-width: 991px) {
-      justify-content: center;
+    @media (min-width: 991px) {
+      justify-content: inherit;
     }
   }
 

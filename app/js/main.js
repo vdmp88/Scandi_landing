@@ -51,21 +51,27 @@ $(document).ready(function () {
 
 const init = () => {
   document.addEventListener("DOMContentLoaded", () => {
-    initMobileDevice();
+    forMobileDevice();
   });
 };
 
-const initMobileDevice = () => {
-  window.addEventListener("resize", () => {
-    const screenWidth = window.innerWidth;
-    const mobile = screenWidth > 768;
-
-    if (!mobile) {
-      initAccordion();
-      initHamburger();
-    }
+const forMobileDevice = () => {
+  "load resize".split(" ").forEach((e) => {
+    window.addEventListener(e, initMobile, false);
   });
 };
+
+function initMobile() {
+  const screenWidth = window.innerWidth;
+  const mobile = screenWidth > 768;
+
+  if (!mobile) {
+    initAccordion();
+    initHamburger();
+  } else {
+    deleteListeners();
+  }
+}
 
 function onClickHamburger() {
   const navigation = document.querySelector(".navigation");
@@ -75,8 +81,9 @@ function onClickHamburger() {
   hamburger.classList.toggle("is-active");
 }
 
+const hamburger = document.querySelector(".hamburger");
+
 let initHamburger = () => {
-  const hamburger = document.querySelector(".hamburger");
   hamburger.addEventListener("click", onClickHamburger);
 };
 
@@ -96,12 +103,20 @@ function toggleAccordion(e) {
   }
 }
 
-let initAccordion = () => {
-  const accordionHeader = document.querySelectorAll(".accordion__header");
+const accordionHeader = document.querySelectorAll(".accordion__header");
 
+let initAccordion = () => {
   accordionHeader.forEach((title) =>
     title.addEventListener("click", toggleAccordion)
   );
+};
+
+let deleteListeners = () => {
+  accordionHeader.forEach((title) =>
+    title.removeEventListener("click", toggleAccordion)
+  );
+
+  hamburger.removeEventListener("click", onClickHamburger);
 };
 
 init();
