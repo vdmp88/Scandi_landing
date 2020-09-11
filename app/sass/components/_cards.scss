@@ -110,12 +110,16 @@
     margin-bottom: 20px;
 
     @media (min-width: 768px) {
+      max-width: 350px;
       justify-content: flex-start;
-      margin-bottom: 0;
     }
 
     &:last-child {
       margin-bottom: 0;
+
+      @media (min-width: 768px) {
+        margin-bottom: 20px;
+      }
     }
 
     .card__header {
@@ -129,6 +133,11 @@
       cursor: pointer;
       padding: 50px 10px;
 
+      @media (min-width: 768px) {
+        padding: 50px 10px 25px 10px;
+        cursor: initial;
+      }
+
       .card__title {
         text-transform: uppercase;
         padding-bottom: 5px;
@@ -140,10 +149,19 @@
     }
 
     .card__content {
+      @media (min-width: 768px) {
+        max-height: 100%;
+        padding: 0 30px 125px 40px;
+      }
+
       li {
         position: relative;
         padding-left: 10px;
         margin-bottom: 10px;
+
+        @media (min-width: 768px) {
+          padding-left: 15px;
+        }
 
         &:last-child {
           margin-bottom: 0;
@@ -186,12 +204,12 @@
     border-radius: 5px 5px 0px 0px;
     max-width: 320px;
     width: 100%;
-    padding: 30px 40px 34px 30px;
+    padding: 15px 15px 20px;
     position: relative;
     height: 100%;
 
-    @media (max-width: 375px) {
-      padding: 15px 15px 20px;
+    @media (min-width: 375px) {
+      padding: 30px 40px 34px 30px;
     }
 
     &::before {

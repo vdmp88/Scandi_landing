@@ -1,6 +1,16 @@
 .section.section--banner {
   height: calc(100vh - 70px);
 
+  .slogan {
+    margin-left: auto;
+    max-width: 400px;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
   .section__wrapper {
     display: flex;
     position: relative;
@@ -34,10 +44,15 @@
         font-size: 36px;
         font-weight: 700;
         text-align: left;
+        padding: 0 0 10px 0;
+
+        &::before {
+          display: none;
+        }
       }
 
       .section__text {
-        padding: 10px 0 20px;
+        padding-bottom: 20px;
       }
     }
 
