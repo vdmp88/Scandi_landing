@@ -9,7 +9,7 @@
   cursor: pointer;
   max-width: 155px;
   width: 100%;
-  font-family: "Museo Sans Cyrl";
+  font-family: $primary-font;
 
   @media (min-width: 768px) {
     max-width: 210px;
