@@ -1,0 +1,111 @@
+.section.section--banner {
+  height: calc(100vh - 70px);
+  padding-top: 0;
+
+  .slogan {
+    margin-left: auto;
+    max-width: 400px;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .section__wrapper {
+    display: flex;
+    position: relative;
+    height: 100%;
+    align-items: center;
+    overflow: hidden;
+
+    &::before {
+      content: url("../img/banner-item.svg");
+      position: absolute;
+      right: 0;
+      top: -200px;
+      z-index: -1;
+
+      @media (min-width: 768px) {
+        content: "";
+        max-width: 150px;
+        height: 3px;
+        background: #ddcbc1;
+        top: 50%;
+        left: 50%;
+        z-index: 10;
+        transform: translate(-50%, -50%);
+      }
+
+      @media (min-width: 991px) {
+        max-width: 240px;
+      }
+    }
+
+    &::after {
+      content: url("../img/banner-item-2.svg");
+      position: absolute;
+      right: 0;
+      bottom: 45px;
+      z-index: -1;
+
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+
+    .section__description {
+      position: relative;
+      left: 20px;
+      z-index: 2;
+      max-width: 300px;
+
+      @media (min-width: 678px) {
+        max-width: 400px;
+      }
+
+      .section__title {
+        font-size: 36px;
+        font-weight: 700;
+        text-align: left;
+        padding: 0 0 10px 0;
+
+        @media (min-width: 678px) {
+          font-size: 48px;
+        }
+
+        &::before {
+          display: none;
+        }
+      }
+
+      .section__text {
+        padding: 0 0 20px 0;
+        font-size: 16px;
+
+        @media (min-width: 678px) {
+          font-size: 20px;
+          padding: 0 75px 20px 0;
+          line-height: 1.4;
+        }
+      }
+    }
+
+    .section__image {
+      height: 80%;
+      display: flex;
+      position: absolute;
+      left: 60%;
+      align-items: center;
+
+      @media (min-width: 768px) {
+        height: 100%;
+        left: 50%;
+      }
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+}

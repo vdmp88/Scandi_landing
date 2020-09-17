@@ -1,0 +1,135 @@
+.section--feedback {
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: 768px) {
+    padding: 90px 0;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .section__title {
+    text-align: start;
+    padding-bottom: 20px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .title-wrapper {
+    position: relative;
+    padding: 70px 0 70px 20px;
+
+    @media (min-width: 420px) {
+      padding: 30px;
+    }
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 222px;
+      left: -20%;
+      top: 60%;
+      background: rgba(247, 247, 247, 0.62);
+      transform: rotate(16.77deg) translateY(-50%);
+
+      @media (min-width: 420px) {
+        display: none;
+      }
+    }
+
+    .btn {
+      position: relative;
+    }
+  }
+
+  .form-wrapper {
+    position: absolute;
+    z-index: 20;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+
+  .list--contact {
+    position: relative;
+    padding: 80px 0 80px 75px;
+    background: #f0ded4;
+    z-index: -1;
+
+    @media (min-width: 768px) {
+      right: -345px;
+      max-width: calc(100% - 345px);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: #bda79a;
+      height: 150px;
+      width: 4px;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .list__item {
+      font-size: 20px;
+      position: relative;
+
+      &::before {
+        content: url("../img/envelope.svg");
+        position: absolute;
+        left: -35px;
+        top: 0;
+      }
+
+      &:first-child::before {
+        content: url("../img/phone-call.svg");
+      }
+
+      &:last-child::before {
+        content: url("../img/location.svg");
+      }
+
+      & + .list__item {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .slogan {
+    margin: 15px 0;
+    display: none;
+
+    &::before {
+      @media (min-width: 991px) {
+        display: none;
+      }
+    }
+
+    @media (min-width: 991px) {
+      -webkit-text-stroke: 1px #bbb;
+      display: block;
+      position: absolute;
+      left: 385px;
+      bottom: -70px;
+      font-size: 64px;
+      line-height: 1.1;
+      margin: 0;
+      padding-right: 0;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.backdrop {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  position: fixed;
+  display: none;
+
+  &.backdrop--is-active {
+    display: block;
+  }
+}
+
+.modal {
+  position: fixed;
+  z-index: 101;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  background: $white-color;
+  box-shadow: 0px 0px 10px rgba(198, 198, 198, 0.35);
+  border-radius: 5px;
+  padding: 50px 20px 30px 20px;
+
+  &.modal--is-active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &.modal--done {
+    max-width: 310px;
+    width: 100%;
+
+    @media (min-width: 375px) {
+      max-width: 335px;
+    }
+
+    .modal__img {
+      display: flex;
+      margin: 0 auto;
+      padding-bottom: 20px;
+    }
+
+    .modal__text {
+      text-align: center;
+      font-weight: 700;
+    }
+  }
+}

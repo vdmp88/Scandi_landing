@@ -1,13 +1,32 @@
 // utils
-@import 'utils/_variable';
+@import "utils/_variable";
 
 // base
-@import 'base/_reset';
-@import 'base/_font';
-@import 'base/_base';
+@import "base/_base";
+@import "base/_font";
 
+// layouts
+@import "layouts/header";
+@import "layouts/footer";
 
-// bootstrap
-// @import 'vendor/bootstrap/bootstrap';
+// components
+@import "components/_buttons";
+@import "components/_cards";
+@import "components/slider";
+@import "components/accordion";
+@import "components/feedback-form";
+@import "components/modal";
 
+// pages
+@import "sections/_banner";
+@import "sections/our-style";
+@import "sections/about";
+@import "sections/price";
+@import "sections/our-project";
+@import "sections/work-process";
+@import "sections/review";
+@import "sections/partners";
+@import "sections/feedback";
 
+// vendor
+@import "vendor/slick/slick.scss";
