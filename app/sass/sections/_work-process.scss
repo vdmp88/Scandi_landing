@@ -1,4 +1,8 @@
 .section--work-process {
+  @media (min-width: 991px) {
+    padding-top: 115px;
+  }
+
   .section__title {
     @media (min-width: 991px) {
       padding-bottom: 10px;

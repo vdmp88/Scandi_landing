@@ -23,6 +23,29 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <div class="backdrop"></div>
+    <div
+      tabindex="0"
+      class="modal form-wrapper"
+      data-modal-name="contact-modal"
+    >
+      <h3 class="form__title">Остались вопросы?</h3>
+      <span class="form__text">
+        Заполните форму, и мы свяжемся с Вами в ближайше время
+      </span>
+      <form class="form form--feedback">
+        <input class="input-field" type="text" placeholder="Ваше имя" />
+        <input class="input-field" type="text" placeholder="Номер телефона" />
+        <button class="btn btn--primary">Отправить</button>
+      </form>
+    </div>
+
+    <div class="backdrop"></div>
+    <div tabindex="0" class="modal modal--done" data-modal-name="done-modal">
+      <img class="modal__img" src="img/plane.svg" alt="done-msg" />
+      <div class="modal__text">Ваше сообщение отправлено</div>
+    </div>
+
     <header class="header">
       <div class="container header__wrapper">
         <div class="logo">
@@ -86,7 +109,9 @@
             Создаем скандинавский интерьер в Харькове и области
           </div>
           <div class="section_action">
-            <button class="btn btn--primary">Связаться</button>
+            <button class="btn btn--primary" data-modal-trigger="contact-modal">
+              Связаться
+            </button>
           </div>
         </div>
         <div class="section__image">
@@ -184,45 +209,66 @@
               <h4 class="card__title">Стандарт</h4>
               <div class="card__price">от 799 грн/ м.кв.</div>
             </div>
-            <ul class="card__content accordion__content">
-              <li>демонтаж настенного покрытия</li>
-              <li>электромонтажные работы</li>
-              <li>реставрация напольного покрытия</li>
-              <li>штукатурка и покраска</li>
-              <li>установка натяжного потолка</li>
-              <li>полная замена мебели</li>
-              <li>установка сигнализаций</li>
-              <li>покупка всего декора</li>
-            </ul>
+            <div class="card__content accordion__content">
+              <ul class="card__list">
+                <li>демонтаж настенного покрытия</li>
+                <li>электромонтажные работы</li>
+                <li>реставрация напольного покрытия</li>
+                <li>штукатурка и покраска</li>
+                <li>установка натяжного потолка</li>
+                <li>полная замена мебели</li>
+                <li>установка сигнализаций</li>
+                <li>покупка всего декора</li>
+              </ul>
+              <button
+                class="btn btn--primary"
+                data-modal-trigger="contact-modal"
+              >
+                Заказать
+              </button>
+            </div>
           </li>
           <li class="card card--price accordion">
             <div class="card__header accordion__header">
               <h4 class="card__title">Люкс</h4>
               <div class="card__price">от 799 грн/ м.кв.</div>
             </div>
-            <ul class="card__content accordion__content">
-              <li>демонтаж настенного покрытия</li>
-              <li>электромонтажные работы</li>
-              <li>реставрация напольного покрытия</li>
-              <li>штукатурка и покраска</li>
-              <li>установка натяжного потолка</li>
-              <li>полная замена мебели</li>
-              <li>установка сигнализаций</li>
-              <li>покупка всего декора</li>
-            </ul>
+            <div class="card__content accordion__content">
+              <ul class="card__list">
+                <li>демонтаж настенного покрытия</li>
+                <li>электромонтажные работы</li>
+                <li>реставрация напольного покрытия</li>
+                <li>штукатурка и покраска</li>
+                <li>установка натяжного потолка</li>
+                <li>полная замена мебели</li>
+                <li>установка сигнализаций</li>
+                <li>покупка всего декора</li>
+              </ul>
+              <button
+                class="btn btn--primary"
+                data-modal-trigger="contact-modal"
+              >
+                Заказать
+              </button>
+            </div>
           </li>
           <li class="card card--price accordion">
             <div class="card__header accordion__header">
               <h4 class="card__title">Эконом</h4>
               <div class="card__price">от 599 грн/ м.кв.</div>
             </div>
-            <ul class="card__content accordion__content">
-              <li>демонтаж настенного покрытия</li>
-              <li>реставрация напольного покрытия</li>
-              <li>грунтовка стен и поклейка обоев</li>
-              <li>частичная замена мебели</li>
-              <li>покупка базового декора</li>
-            </ul>
+            <div class="card__content accordion__content">
+              <ul class="card__list">
+                <li>демонтаж настенного покрытия</li>
+                <li>реставрация напольного покрытия</li>
+                <li>грунтовка стен и поклейка обоев</li>
+                <li>частичная замена мебели</li>
+                <li>покупка базового декора</li>
+              </ul>
+              <button class="btn btn--primary" data-modal-trigger="done-modal">
+                Заказать
+              </button>
+            </div>
           </li>
         </ul>
       </div>
@@ -492,61 +538,79 @@
     </section>
 
     <footer class="footer">
-      <div class="container">
+      <div class="container footer__wrapper">
         <div class="logo">
           <img src="img/white-logo.svg" alt="logo" />
-        </div>
-        <nav class="navigation">
-          <ul class="list">
-            <li class="accordion accordion-open">
-              <span class="list__section accordion__header">НАВИГАЦИЯ</span>
-              <ul class="accordion__content">
-                <li class="list__item">
-                  <a href="#">Цены</a>
-                </li>
-                <li class="list__item">
-                  <a href="#">О нас</a>
-                </li>
-                <li class="list__item">
-                  <a href="#">Отзывы</a>
-                </li>
-                <li class="list__item">
-                  <a href="#">Проекты</a>
-                </li>
-              </ul>
+          <ul class="list list--social-network">
+            <li class="list__item">
+              <a href="#">
+                <img src="img/instagram.svg" alt="social-network" />
+              </a>
             </li>
-            <li class="accordion">
-              <span class="list__section accordion__header">Гарантии</span>
-              <ul class="accordion__content">
-                <li class="list__item">
-                  <a href="#">Сертификаты</a>
-                </li>
-                <li class="list__item">
-                  <a href="#">Мастера</a>
-                </li>
-                <li class="list__item">
-                  <a href="#">Лицензии</a>
-                </li>
-              </ul>
+            <li class="list__item">
+              <a href="#">
+                <img src="img/twitter.svg" alt="social-network" />
+              </a>
             </li>
-            <li class="accordion">
-              <span class="list__section accordion__header">
-                Сотрудничество
-              </span>
-              <ul class="accordion__content">
-                <li class="list__item">
-                  <a href="#">Компаниям</a>
-                </li>
-                <li class="list__item">
-                  <a href="#">Мастерам</a>
-                </li>
-                <li class="list__item">
-                  <a href="#">Рабочим</a>
-                </li>
-              </ul>
+            <li class="list__item">
+              <a href="#">
+                <img src="img/facebook.svg" alt="social-network" />
+              </a>
+            </li>
+            <li class="list__item">
+              <a href="#">
+                <img src="img/linked-in.svg" alt="social-network" />
+              </a>
             </li>
           </ul>
-        </nav>
+        </div>
+        <ul class="list list--navigation">
+          <li class="list__item accordion">
+            <span class="accordion__header">Навигация</span>
+            <ul class="list list--category accordion__content">
+              <li class="list__item">
+                <a href="#">Цены</a>
+              </li>
+              <li class="list__item">
+                <a href="#">О нас</a>
+              </li>
+              <li class="list__item">
+                <a href="#">Отзывы</a>
+              </li>
+              <li class="list__item">
+                <a href="#">Проекты</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list__item accordion">
+            <span class="accordion__header">Гарантии</span>
+            <ul class="list list--category accordion__content">
+              <li class="list__item">
+                <a href="#">Сертификаты</a>
+              </li>
+              <li class="list__item">
+                <a href="#">Мастера</a>
+              </li>
+              <li class="list__item">
+                <a href="#">Лицензии</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list__item accordion">
+            <span class="accordion__header"> Сотрудничество </span>
+            <ul class="list list--category accordion__content">
+              <li class="list__item">
+                <a href="#">Компаниям</a>
+              </li>
+              <li class="list__item">
+                <a href="#">Мастерам</a>
+              </li>
+              <li class="list__item">
+                <a href="#">Рабочим</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
         <ul class="list list--social-network">
           <li class="list__item">
             <a href="#">

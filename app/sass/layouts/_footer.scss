@@ -5,28 +5,89 @@
 
   @media (min-width: 768px) {
     margin-top: 30px;
+    padding: 65px 0 80px 20px;
   }
 
-  .navigation {
-    .list {
-      .accordion {
-        padding-top: 25px;
+  .footer__wrapper {
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
 
-        &:first-child {
-          .accordion__content {
-            max-height: 100%;
-          }
-        }
-      }
+  .logo {
+    .list--social-network {
+      display: none;
 
-      .list__section {
-        font-weight: 700;
-        text-transform: uppercase;
+      @media (min-width: 768px) {
+        max-width: 130px;
+        padding-top: 12px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
       }
 
       .list__item {
-        padding-top: 12px;
+        & + .list__item {
+          padding-left: 0;
+        }
+
+        img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+
+  .list--navigation {
+    @media (min-width: 768px) {
+      display: flex;
+      padding-left: 100px;
+      height: 100%;
+    }
+
+    @media (min-width: 991px) {
+      padding-left: 150px;
+    }
+
+    .accordion {
+      padding-top: 25px;
+
+      @media (min-width: 768px) {
+        padding-top: 27px;
+
+        &:not(:first-child) {
+          padding-left: 45px;
+        }
+      }
+
+      @media (min-width: 991px) {
+        &:not(:first-child) {
+          padding-left: 75px;
+        }
+      }
+
+      .accordion__content {
+        @media (min-width: 768px) {
+          max-height: 100%;
+        }
+      }
+    }
+
+    .accordion__header {
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .list.list--category {
+      .list__item {
+        padding-top: 15px;
         font-size: 16px;
+
+        @media (min-width: 768px) {
+          font-size: 14px;
+          font-weight: 400;
+        }
       }
     }
   }
@@ -34,6 +95,10 @@
   .list--social-network {
     display: flex;
     padding-top: 35px;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
 
     .list__item {
       & + .list__item {

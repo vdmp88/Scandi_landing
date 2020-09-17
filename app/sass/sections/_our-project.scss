@@ -1,8 +1,13 @@
 .section--last-projects {
-  display: none;
+  padding-top: 65px;
+
+  @media (min-width: 768px) {
+    padding-top: 135px;
+  }
 
   .cards-wrapper--gallery {
     display: flex;
     justify-content: space-between;
+    overflow-y: scroll;
   }
 }
