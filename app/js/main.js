@@ -51,17 +51,18 @@ $(document).ready(function () {
 
 const init = () => {
   document.addEventListener("DOMContentLoaded", () => {
-    forMobileDevice();
+    onMobileDevice();
+    initModal();
   });
 };
 
-const forMobileDevice = () => {
+const onMobileDevice = () => {
   "load resize".split(" ").forEach((e) => {
     window.addEventListener(e, initMobile, false);
   });
 };
 
-function initMobile() {
+const initMobile = () => {
   const screenWidth = window.innerWidth;
   const mobile = screenWidth > 768;
 
@@ -71,19 +72,19 @@ function initMobile() {
   } else {
     deleteListeners();
   }
-}
+};
 
-function onClickHamburger() {
+const onClickHamburger = () => {
   const navigation = document.querySelector(".navigation");
   const hamburger = document.querySelector(".hamburger");
 
   navigation.classList.toggle("navigation--active");
   hamburger.classList.toggle("is-active");
-}
+};
 
 const hamburger = document.querySelector(".hamburger");
 
-let initHamburger = () => {
+const initHamburger = () => {
   hamburger.addEventListener("click", onClickHamburger);
 };
 
@@ -105,18 +106,62 @@ function toggleAccordion(e) {
 
 const accordionHeader = document.querySelectorAll(".accordion__header");
 
-let initAccordion = () => {
+const initAccordion = () => {
   accordionHeader.forEach((title) =>
     title.addEventListener("click", toggleAccordion)
   );
 };
 
-let deleteListeners = () => {
+const deleteListeners = () => {
   accordionHeader.forEach((title) =>
     title.removeEventListener("click", toggleAccordion)
   );
 
   hamburger.removeEventListener("click", onClickHamburger);
+};
+
+const backdrop = document.querySelectorAll(".backdrop");
+const modals = document.querySelectorAll(".modal");
+const openModalButtons = document.querySelectorAll("[data-modal-trigger]");
+
+const showModal = (attr) => {
+  const currentModal = document.querySelector(`[data-modal-name="${attr}"]`);
+
+  currentModal.focus();
+  currentModal.classList.add("modal--is-active");
+  currentModal.previousElementSibling.classList.add("backdrop--is-active");
+};
+
+const hideModal = () => {
+  modals.forEach((modal) => {
+    modal.classList.remove("modal--is-active");
+    modal.previousElementSibling.classList.remove("backdrop--is-active");
+  });
+};
+
+const triggerModal = () => {
+  openModalButtons.forEach((attr) => {
+    attr.addEventListener("click", (e) => {
+      showModal(e.target.dataset.modalTrigger);
+    });
+  });
+};
+
+const dismissModal = () => {
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      hideModal();
+    }
+  });
+
+  backdrop.forEach((backdrop) => {
+    backdrop.addEventListener("click", hideModal);
+  });
+};
+
+const initModal = () => {
+  dismissModal();
+  triggerModal();
 };
 
 init();

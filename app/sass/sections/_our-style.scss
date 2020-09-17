@@ -1,16 +1,13 @@
 .section--our-style {
   padding: 100px 33px 0px;
+  margin-bottom: -20px;
 
   @media (min-width: 768px) {
-    padding: 50px 33px 0px 33px;
+    padding: 65px 33px 0px 33px;
   }
 
   .section__title {
     margin-top: 60px;
-
-    @media (min-width: 576px) {
-      padding-bottom: 10px;
-    }
 
     @media (min-width: 768px) {
       margin-top: 0;
