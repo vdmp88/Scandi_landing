@@ -1,0 +1,22 @@
+.section--our-style {
+  padding: 100px 33px 0px;
+  margin-bottom: -20px;
+
+  @media (min-width: 768px) {
+    padding: 65px 33px 0px 33px;
+  }
+
+  .section__title {
+    margin-top: 60px;
+
+    @media (min-width: 768px) {
+      margin-top: 0;
+    }
+  }
+
+  .cards-wrapper--our-style {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

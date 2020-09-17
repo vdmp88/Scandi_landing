@@ -1,0 +1,12 @@
+.section--about-us {
+  margin-bottom: -20px;
+
+  @media (min-width: 991px) {
+    padding-top: 115px;
+  }
+
+  .cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
