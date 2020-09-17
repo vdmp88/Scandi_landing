@@ -1146,11 +1146,8 @@ body {
 
 @media (min-width: 991px) {
   .section--work-process {
-    padding-top: 115px; } }
-
-@media (min-width: 991px) {
-  .section--work-process .section__title {
-    padding-bottom: 10px; } }
+    padding-top: 115px;
+    margin-bottom: -20px; } }
 
 .section--work-process .list {
   padding: 0 30px; }
@@ -1175,13 +1172,17 @@ body {
     @media (min-width: 991px) {
       .section--work-process .list .list__item {
         width: 49%;
-        padding-top: 20px; } }
+        padding-bottom: 20px; } }
     .section--work-process .list .list__item + li {
       padding-top: 20px; }
+      @media (min-width: 991px) {
+        .section--work-process .list .list__item + li {
+          padding-top: 0; } }
     .section--work-process .list .list__item .list__count {
       position: relative;
       font-size: 32px;
-      letter-spacing: 0.5px; }
+      letter-spacing: 0.5px;
+      font-weight: 500; }
       .section--work-process .list .list__item .list__count::before {
         content: "";
         background: #ddcbc1;

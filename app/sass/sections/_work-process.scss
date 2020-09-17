@@ -1,12 +1,7 @@
 .section--work-process {
   @media (min-width: 991px) {
     padding-top: 115px;
-  }
-
-  .section__title {
-    @media (min-width: 991px) {
-      padding-bottom: 10px;
-    }
+    margin-bottom: -20px;
   }
 
   .list {
@@ -23,17 +18,22 @@
 
       @media (min-width: 991px) {
         width: 49%;
-        padding-top: 20px;
+        padding-bottom: 20px;
       }
 
       & + li {
         padding-top: 20px;
+
+        @media (min-width: 991px) {
+          padding-top: 0;
+        }
       }
 
       .list__count {
         position: relative;
         font-size: 32px;
         letter-spacing: 0.5px;
+        font-weight: 500;
 
         &::before {
           content: "";
