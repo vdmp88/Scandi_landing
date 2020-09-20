@@ -74,15 +74,14 @@ const initMobile = () => {
   }
 };
 
+const hamburger = document.querySelector(".hamburger");
+
 const onClickHamburger = () => {
   const navigation = document.querySelector(".navigation");
-  const hamburger = document.querySelector(".hamburger");
 
   navigation.classList.toggle("navigation--active");
   hamburger.classList.toggle("is-active");
 };
-
-const hamburger = document.querySelector(".hamburger");
 
 const initHamburger = () => {
   hamburger.addEventListener("click", onClickHamburger);
@@ -120,6 +119,7 @@ const deleteListeners = () => {
   hamburger.removeEventListener("click", onClickHamburger);
 };
 
+const body = document.body;
 const backdrop = document.querySelectorAll(".backdrop");
 const modals = document.querySelectorAll(".modal");
 const openModalButtons = document.querySelectorAll("[data-modal-trigger]");
@@ -128,11 +128,14 @@ const showModal = (attr) => {
   const currentModal = document.querySelector(`[data-modal-name="${attr}"]`);
 
   currentModal.focus();
+  body.classList.add("no-scroll");
   currentModal.classList.add("modal--is-active");
   currentModal.previousElementSibling.classList.add("backdrop--is-active");
 };
 
 const hideModal = () => {
+  body.classList.remove("no-scroll");
+
   modals.forEach((modal) => {
     modal.classList.remove("modal--is-active");
     modal.previousElementSibling.classList.remove("backdrop--is-active");
@@ -154,9 +157,7 @@ const dismissModal = () => {
     }
   });
 
-  backdrop.forEach((backdrop) => {
-    backdrop.addEventListener("click", hideModal);
-  });
+  backdrop.forEach((backdrop) => backdrop.addEventListener("click", hideModal));
 };
 
 const initModal = () => {

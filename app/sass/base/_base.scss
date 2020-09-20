@@ -44,6 +44,10 @@ p {
   margin: 0 auto;
 }
 
+.no-scroll {
+  overflow-y: hidden;
+}
+
 body {
   font-family: $primary-font;
   color: $dark-color;
@@ -83,7 +87,6 @@ body {
   padding-right: 20px;
   font-size: 32px;
   font-weight: 700;
-  font-family: $secondary-font;
   letter-spacing: 1px;
   line-height: 36px;
   -webkit-text-fill-color: transparent;
